@@ -28,6 +28,13 @@ public class Serv1 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		/*
+		 * Servlet technology is used to create dynamic webpages at run time according to a request.
+		 * 
+		 * The class that extends HttpServlet class is also called as a servlet.
+		 * 
+		 * Servlet is the predefined base interface of servlet hierarchy.
+		 * */
 		PrintWriter out=response.getWriter();
 		out.print("<b>Hello everyone</b>");
 	}

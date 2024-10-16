@@ -31,6 +31,21 @@ public class Serv4Session extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		/*
+		 * We can alse use forward and include method of RequestDispatcher to travel from this servlet to another servlet.
+		 * 
+		 * We use forward method when we do not want to print anything in first servlet because forward method will create fresh
+		 * page of printing the message of second servlet.So we will not be able to see any message that we try to print using first servlet.
+		 * 
+		 * We use incluse mehod to travel from one servlet to another when we want to see the message printed in first servlet and second 
+		 * servlet  both in one single page itself.
+		 * 
+		 *  Note-
+		 *  If we make the object of RequestDispatcher in the doGet method of first servlet then while going to the second servlet
+		 *  , we will reach the doGet method of second servlet also.
+		 *  
+		 *  If we male the object of RequestDispatcher in the doPost method of first servlet then while
+		 * */
 		PrintWriter out=response.getWriter();
 		String name=request.getParameter("t1");
 		out.print("Hello"+name+"I am on First page<br>");

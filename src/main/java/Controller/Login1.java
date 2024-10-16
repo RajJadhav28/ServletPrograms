@@ -28,6 +28,16 @@ public class Login1 extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		/*
+		 * sendRedirect method of response object is used to travel from one servlet to another servlet/page.
+		 * 
+		 * if we got to another servlet by using this method then we will always reach the doGet method of that servlet.We do not have the 
+		 * option of explicitly calling doPost method over here.
+		 * 
+		 * Note-sendRedirect method will take us to next servlet's doGet
+		 * method, but this doGet method will have a fresh request object so any data
+		 * that was present in the first servlet request object will not be present in the request object of second servlet.
+		*/
 		PrintWriter out=response.getWriter();
 		String user=request.getParameter("user");
 		String pass=request.getParameter("pass");
