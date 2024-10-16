@@ -2,6 +2,20 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>ServletPrograms</display-name>
   
+  <!--
+  Servlet tag is used to givr information regarding the servlet.
+  It has two sub tags servlet-name tag and servlet-class tag.
+  
+  servlet-mapping is used to give information regarding the request that comes from the web page. It has two sub tags servlet-name and 
+  url-pattern tags.
+  
+  note:
+  1)In order to map the request to a particular servlet we have to make sure that the servlet-name tag has the same value in the servlet-
+  mapping and servlet tag.
+  
+  2)One servlet can be mapped to only one request 
+   -->
+  
   
   <context-param>
   <param-name>College</param-name>

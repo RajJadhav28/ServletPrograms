@@ -38,6 +38,8 @@ public class Serv7 extends HttpServlet {
 		ServletContext context=request.getServletContext();
 		String college=context.getInitParameter("College");
 		out.print("<br>College name that is fetch from context param tag:"+college);
+		//ServletConfig interface method is used to fetch data Stored inside<init-param> tag
+		//ServletContext interface method is used to fetch data stored inside <context-param>
 	}
 
 }
